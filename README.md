@@ -1,70 +1,138 @@
-# Getting Started with Create React App
+# React Portfolio - Timothée Juillet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and interactive portfolio built with React, Tailwind CSS, and Framer Motion.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **Modern Design**: Elegant interface with smooth animations
+- **Dark/Light Mode**: Adaptive theme with smooth transitions
+- **Advanced Animations**: 
+  - Text animations (Split Text, Blur Text, Typewriter)
+  - Interactive Folder components
+  - Parallax effects
+  - Custom cursor
+  - Scroll progress indicator
+  - Creative dock navigation
+- **Responsive**: Optimized for all devices
+- **Performance**: Fast loading and optimized animations
 
-### `npm start`
+## 📦 Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Navigate to the project directory:
+```bash
+cd /Users/timotheejuillet/Documents/Perso/portfolio
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Install dependencies:
+```bash
+npm install
+```
 
-### `npm test`
+3. Start the development server:
+```bash
+npm run dev
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The application will be available at `http://localhost:5173`
 
-### `npm run build`
+## 🛠️ Technologies Used
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React 19**: Modern JavaScript framework
+- **Vite**: Fast build tool
+- **Tailwind CSS 3**: Utility-first CSS framework
+- **Framer Motion**: Animation library
+- **React Hooks**: State and effects management
+- **Context API**: Global theme management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📁 Project Structure
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+src/
+├── components/
+│   ├── Navigation.jsx      # Responsive navigation bar
+│   ├── Hero.jsx           # Hero section with animations
+│   ├── About.jsx          # About section with timeline
+│   ├── Projects.jsx       # Projects gallery with filters
+│   ├── Contact.jsx        # Contact form
+│   ├── Footer.jsx         # Footer
+│   ├── TextAnimations.jsx # Text animation components
+│   ├── Folder.jsx         # Interactive folder components
+│   ├── Button.jsx         # Reusable button components
+│   ├── Dock.jsx           # Dock navigation
+│   └── Effects.jsx        # Visual effects (cursor, scroll, etc.)
+├── contexts/
+│   └── ThemeContext.js    # Theme management
+├── hooks/
+│   └── useScroll.js       # Custom hooks
+├── App.jsx                # Main component
+├── main.jsx               # Entry point
+└── index.css              # Global Tailwind styles
+```
 
-### `npm run eject`
+## 🎨 Customization
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Modify Colors
+Edit `tailwind.config.js` to customize the color palette:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+colors: {
+  primary: {
+    // Your custom colors
+  }
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Add Projects
+Modify the `projects` array in `src/components/Projects.jsx`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Update Personal Information
+Update information in:
+- `Hero.jsx`: Title and main description
+- `About.jsx`: Experience and skills
+- `Contact.jsx`: Contact information
 
-## Learn More
+## 🚀 Deployment
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To create a production build:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run build
+```
 
-### Code Splitting
+The `build/` folder will contain optimized files ready for deployment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📱 Responsive Design
 
-### Analyzing the Bundle Size
+The portfolio is optimized for:
+- 📱 Mobile (< 768px)
+- 💻 Tablet (768px - 1024px)
+- 🖥️ Desktop (> 1024px)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## ⚡ Performance
 
-### Making a Progressive Web App
+- Component lazy loading
+- Image optimization
+- GPU-accelerated animations
+- Automatic code splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔧 Available Scripts
 
-### Advanced Configuration
+- `npm run dev`: Start development server
+- `npm run build`: Create production build
+- `npm run preview`: Preview production build
+- `npm run lint`: Run ESLint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💡 Tips
 
-### Deployment
+1. **Animations**: Animations are disabled on mobile for better performance
+2. **Images**: Use optimized formats (WebP, AVIF) for better performance
+3. **SEO**: Add appropriate meta tags in `public/index.html`
+4. **CV**: Replace the placeholder CV file in `public/CV_Timothee_Juillet.pdf` with your actual CV
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 License
 
-### `npm run build` fails to minify
+This project is under MIT license.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+Made with ❤️ by Timothée Juillet
