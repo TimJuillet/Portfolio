@@ -78,31 +78,31 @@ const Projects = () => {
       title: "Olympic Games Management System",
       description: "Comprehensive system for managing Olympic Games events, athletes, and results",
       longDescription: "Implementation of complex database architecture with real-time updates. Full-stack application for managing all aspects of Olympic Games including events, athletes, schedules, and results.",
-      tags: ["Java", "MySQL", "JavaFX", "JDBC"],
+      tags: ["Python", "MySQL", "Database", "Backend"],
       category: "web",
       github: "https://github.com/TimJuillet/ProjetJO",
       features: [
         "Complex database architecture",
         "Real-time result updates",
         "Athlete and event management",
-        "JavaFX desktop interface"
+        "RESTful API design"
       ],
       date: "Apr 2024",
       color: "from-indigo-500 to-purple-500"
     },
     {
       id: 6,
-      title: "AI Dinosaur Image Generator",
-      description: "Personal project implementing generative AI to create dinosaur images",
-      longDescription: "Exploration of GANs and diffusion models for creative image generation. Built a system capable of generating unique dinosaur images using state-of-the-art generative AI techniques.",
-      tags: ["Python", "TensorFlow", "GANs", "Deep Learning"],
+      title: "AI Dinosaur Name Generator",
+      description: "Personal project using AI to generate new dinosaur names",
+      longDescription: "Exploration of natural language processing and generative AI techniques to create unique dinosaur names. Built a system using Jupyter Notebook that learns from existing dinosaur naming patterns to generate scientifically plausible new dinosaur names.",
+      tags: ["Python", "Jupyter Notebook", "NLP", "AI", "Machine Learning"],
       category: "ml",
       github: "https://github.com/TimJuillet/Dinosaures_generate",
       features: [
-        "GAN implementation for image generation",
-        "Custom dataset preparation",
-        "Model training and optimization",
-        "Creative AI exploration"
+        "AI model for name generation",
+        "Pattern learning from existing dinosaur names",
+        "Scientific naming convention adherence",
+        "Interactive Jupyter Notebook interface"
       ],
       date: "Dec 2023",
       color: "from-yellow-500 to-orange-500"
