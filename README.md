@@ -1,138 +1,225 @@
-# React Portfolio - Timothée Juillet
+# Portfolio - Timothée Juillet
 
-A modern and interactive portfolio built with React, Tailwind CSS, and Framer Motion.
+Portfolio professionnel d'ingénieur Full-Stack / ML développé avec React, Vite et Tailwind CSS.
 
-## 🚀 Features
+## 🚀 Fonctionnalités
 
-- **Modern Design**: Elegant interface with smooth animations
-- **Dark/Light Mode**: Adaptive theme with smooth transitions
-- **Advanced Animations**: 
-  - Text animations (Split Text, Blur Text, Typewriter)
-  - Interactive Folder components
-  - Parallax effects
-  - Custom cursor
-  - Scroll progress indicator
-  - Creative dock navigation
-- **Responsive**: Optimized for all devices
-- **Performance**: Fast loading and optimized animations
+- ✨ Design moderne et professionnel avec animations subtiles
+- 🌓 Mode sombre/clair
+- 📱 Entièrement responsive (desktop et mobile)
+- 🎨 Animations Framer Motion
+- 📧 Formulaire de contact fonctionnel
+- 🔄 Déploiement automatique avec GitHub Actions
 
-## 📦 Installation
+## 🛠️ Technologies
 
-1. Navigate to the project directory:
-```bash
-cd /Users/timotheejuillet/Documents/Perso/portfolio
+- **Frontend**: React 19, Vite, Tailwind CSS
+- **Animations**: Framer Motion
+- **Routing**: React Router DOM
+- **Déploiement**: PM2, GitHub Actions
+- **Serveur**: Ubuntu VPS avec Nginx (optionnel)
+
+## 📂 Structure du projet
+
+```
+portfolio/
+├── src/
+│   ├── components/     # Composants réutilisables
+│   ├── pages/         # Pages de l'application
+│   ├── contexts/      # Context API (theme)
+│   ├── hooks/         # Custom hooks
+│   ├── assets/        # Images, CV, etc.
+│   └── App.jsx        # Composant principal
+├── .github/
+│   └── workflows/     # GitHub Actions
+├── public/           # Fichiers statiques
+└── dist/            # Build de production
 ```
 
-2. Install dependencies:
+## 🚀 Installation et développement
+
+### Prérequis
+
+- Node.js 16+
+- NPM ou Yarn
+
+### Installation locale
+
 ```bash
+# Cloner le repository
+git clone https://github.com/TimJuillet/portfolio.git
+cd portfolio
+
+# Installer les dépendances
 npm install
-```
 
-3. Start the development server:
-```bash
+# Lancer en développement
 npm run dev
+
+# Build pour production
+npm run build
+
+# Preview du build
+npm run preview
 ```
 
-The application will be available at `http://localhost:5173`
+## 🌐 Déploiement
 
-## 🛠️ Technologies Used
+### Option 1: Déploiement automatique (Recommandé)
 
-- **React 19**: Modern JavaScript framework
-- **Vite**: Fast build tool
-- **Tailwind CSS 3**: Utility-first CSS framework
-- **Framer Motion**: Animation library
-- **React Hooks**: State and effects management
-- **Context API**: Global theme management
+Le déploiement est automatisé via GitHub Actions. Chaque push sur la branche `main` déclenche :
 
-## 📁 Project Structure
+1. Build automatique
+2. Transfert sur le serveur
+3. Redémarrage avec PM2
 
-```
-src/
-├── components/
-│   ├── Navigation.jsx      # Responsive navigation bar
-│   ├── Hero.jsx           # Hero section with animations
-│   ├── About.jsx          # About section with timeline
-│   ├── Projects.jsx       # Projects gallery with filters
-│   ├── Contact.jsx        # Contact form
-│   ├── Footer.jsx         # Footer
-│   ├── TextAnimations.jsx # Text animation components
-│   ├── Folder.jsx         # Interactive folder components
-│   ├── Button.jsx         # Reusable button components
-│   ├── Dock.jsx           # Dock navigation
-│   └── Effects.jsx        # Visual effects (cursor, scroll, etc.)
-├── contexts/
-│   └── ThemeContext.js    # Theme management
-├── hooks/
-│   └── useScroll.js       # Custom hooks
-├── App.jsx                # Main component
-├── main.jsx               # Entry point
-└── index.css              # Global Tailwind styles
+**Configuration requise** (voir [DEPLOYMENT_AUTO.md](DEPLOYMENT_AUTO.md)) :
+
+1. Configurer les secrets GitHub :
+   - `HOST`: IP du serveur
+   - `USERNAME`: Utilisateur SSH
+   - `SSH_KEY`: Clé SSH privée
+
+2. Push sur main :
+   ```bash
+   git add .
+   git commit -m "Update portfolio"
+   git push origin main
+   ```
+
+### Option 2: Déploiement manuel
+
+```bash
+# Première fois seulement
+./initial-deploy.sh
+
+# Déploiements suivants
+npm run deploy:manual
 ```
 
-## 🎨 Customization
+### Option 3: Déploiement manuel détaillé
 
-### Modify Colors
-Edit `tailwind.config.js` to customize the color palette:
+```bash
+# Build
+npm run build
+
+# Transférer les fichiers
+rsync -avP dist/ ubuntu@204.216.216.209:/home/ubuntu/Portfolio/
+
+# Sur le serveur
+ssh ubuntu@204.216.216.209
+cd /home/ubuntu/Portfolio
+pm2 restart portfolio
+```
+
+## 🔧 Configuration du serveur
+
+### PM2 Commands
+
+```bash
+# Voir les logs
+pm2 logs portfolio
+
+# Status
+pm2 status
+
+# Restart
+pm2 restart portfolio
+
+# Stop
+pm2 stop portfolio
+```
+
+### Nginx (Optionnel)
+
+Pour utiliser Nginx comme reverse proxy :
+
+```nginx
+server {
+    listen 80;
+    server_name votre-domaine.com;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+```
+
+## 📱 Responsive Design
+
+Le portfolio est optimisé pour :
+- 📱 Mobile (< 768px)
+- 💻 Tablette (768px - 1024px)
+- 🖥️ Desktop (> 1024px)
+
+## 🎨 Personnalisation
+
+### Modifier les couleurs
+
+Éditer `tailwind.config.js` pour changer le thème :
 
 ```javascript
 colors: {
   primary: {
-    // Your custom colors
+    // Vos couleurs
   }
 }
 ```
 
-### Add Projects
-Modify the `projects` array in `src/components/Projects.jsx`
+### Ajouter des projets
 
-### Update Personal Information
-Update information in:
-- `Hero.jsx`: Title and main description
-- `About.jsx`: Experience and skills
-- `Contact.jsx`: Contact information
+Éditer `src/components/Projects.jsx` et ajouter dans le tableau `projects`.
 
-## 🚀 Deployment
+### Mettre à jour le CV
 
-To create a production build:
+Remplacer `src/assets/cv-llt-full_compressed.pdf` par votre CV.
+
+## 🐛 Troubleshooting
+
+### Le site ne se charge pas
 
 ```bash
+# Vérifier les logs PM2
+pm2 logs portfolio
+
+# Redémarrer
+pm2 restart portfolio
+```
+
+### Erreur de build
+
+```bash
+# Nettoyer le cache
+rm -rf node_modules dist
+npm install
 npm run build
 ```
 
-The `build/` folder will contain optimized files ready for deployment.
+### Port déjà utilisé
 
-## 📱 Responsive Design
+```bash
+# Trouver le processus
+sudo lsof -i :3000
 
-The portfolio is optimized for:
-- 📱 Mobile (< 768px)
-- 💻 Tablet (768px - 1024px)
-- 🖥️ Desktop (> 1024px)
+# Tuer le processus
+kill -9 <PID>
+```
 
-## ⚡ Performance
+## 📄 Licence
 
-- Component lazy loading
-- Image optimization
-- GPU-accelerated animations
-- Automatic code splitting
+MIT License - Libre d'utilisation et de modification
 
-## 🔧 Available Scripts
+## 👤 Contact
 
-- `npm run dev`: Start development server
-- `npm run build`: Create production build
-- `npm run preview`: Preview production build
-- `npm run lint`: Run ESLint
-
-## 💡 Tips
-
-1. **Animations**: Animations are disabled on mobile for better performance
-2. **Images**: Use optimized formats (WebP, AVIF) for better performance
-3. **SEO**: Add appropriate meta tags in `public/index.html`
-4. **CV**: Replace the placeholder CV file in `public/CV_Timothee_Juillet.pdf` with your actual CV
-
-## 📄 License
-
-This project is under MIT license.
+- **Email**: timotheejuillet@gmail.com
+- **LinkedIn**: [Timothée Juillet](https://linkedin.com/in/timothée-juillet)
+- **GitHub**: [TimJuillet](https://github.com/TimJuillet)
 
 ---
 
-Made with ❤️ by Timothée Juillet
+Développé avec ❤️ par Timothée Juillet

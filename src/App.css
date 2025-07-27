@@ -70,6 +70,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Mobile safe area padding */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  body {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Ensure mobile menu is accessible */
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 80px !important; /* Space for mobile navigation */
+  }
+}
+
 /* Print styles */
 @media print {
   .no-print {

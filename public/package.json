@@ -1,0 +1,8 @@
+{
+  "name": "portfolio-server",
+  "version": "1.0.0",
+  "description": "Portfolio server configuration",
+  "scripts": {
+    "start": "serve -s . -l 3000"
+  }
+}
