@@ -11,15 +11,16 @@ const Projects = () => {
       id: 1,
       title: "Concept Identification in CNN Features",
       description: "Research project developing a novel methodology for identifying and clustering visual concepts in CNN features",
-      longDescription: "Developed a novel methodology for identifying and clustering visual concepts (eyes, paws, horns) in CNN features. Implemented double-clustering approach on VGG16 to automatically detect and group similar activation patterns across different animal classes.",
-      tags: ["Python", "PyTorch", "KMeans", "LRP", "Research"],
+      longDescription: "Developed a novel methodology for identifying and clustering visual concepts (eyes, paws, horns) in CNN features. Implemented double-clustering approach on VGG16 to automatically detect and group similar activation patterns across different animal classes. This research contributes to explainable AI by making neural network decisions more interpretable.",
+      tags: ["Python", "PyTorch", "KMeans", "LRP", "Research", "XAI"],
       category: "ml",
       github: "https://github.com/TimJuillet/PER",
       features: [
         "Layer-wise Relevance Propagation (LRP) implementation",
         "Double-clustering approach for concept identification",
         "Automatic detection of visual patterns across classes",
-        "VGG16 feature analysis and visualization"
+        "VGG16 feature analysis and visualization",
+        "Contribution to explainable AI research"
       ],
       date: "Feb 2025",
       color: "from-purple-500 to-pink-500"
@@ -29,29 +30,31 @@ const Projects = () => {
       title: "AI-Powered Log Analysis Tool",
       description: "Enterprise application for automated log analysis and error extraction at Amadeus",
       longDescription: "Development of an AI-powered application for automated log analysis and error extraction from the Front Office Reservation division products. Implementation of a data pipeline using Splunk, Jenkins, and Python scripts on Microsoft Azure. Integration of chatbot APIs for intelligent pattern recognition.",
-      tags: ["Python", "Azure", "Splunk", "Jenkins", "AI/ML"],
+      tags: ["Python", "Azure", "Splunk", "Jenkins", "AI/ML", "MLOps"],
       category: "ml",
       features: [
         "Automated log analysis and error extraction",
         "Data pipeline implementation on Azure",
         "Intelligent pattern recognition with chatbot APIs",
-        "Automatic Splunk rule generation"
+        "Automatic Splunk rule generation",
+        "Enterprise-scale deployment"
       ],
-      date: "2025",
+      date: "2025 - Present",
       color: "from-blue-500 to-cyan-500"
     },
     {
       id: 3,
       title: "Vietnam Landmarks Recognition App",
       description: "Mobile application using CNN to recognize Vietnam's most visited places with tourist recommendations",
-      longDescription: "Created a CNN model in Python able to recognise Vietnam's most visited places using Tensorflow and Jupyter. Developed a complete mobile application using React Native, Vite and Tailwind implementing the model with TensorflowJS and an API.",
-      tags: ["React Native", "TensorFlow.js", "Python", "CNN", "Tailwind"],
+      longDescription: "Created a CNN model in Python able to recognise Vietnam's most visited places using Tensorflow and Jupyter. Developed a complete mobile application using React Native, Vite and Tailwind implementing the model with TensorflowJS and an API. The app provides real-time landmark recognition with tourist information and recommendations.",
+      tags: ["React Native", "TensorFlow.js", "Python", "CNN", "Tailwind", "Mobile"],
       category: "mobile",
       features: [
         "CNN model for landmark recognition",
         "Real-time image classification",
         "Tourist recommendations and location info",
-        "Cross-platform mobile application"
+        "Cross-platform mobile application",
+        "Offline model inference with TensorFlow.js"
       ],
       date: "2024",
       color: "from-green-500 to-emerald-500"
@@ -60,32 +63,35 @@ const Projects = () => {
       id: 4,
       title: "Interactive Data Visualization Dashboard",
       description: "School project creating an interactive dashboard for complex data visualization",
-      longDescription: "Implementation of multiple chart types with real-time filtering and responsive design. Created dynamic visualizations for complex datasets with interactive controls.",
-      tags: ["D3.js", "JavaScript", "HTML/CSS", "Data Viz"],
+      longDescription: "Implementation of multiple chart types with real-time filtering and responsive design. Created dynamic visualizations for complex datasets with interactive controls using D3.js. The dashboard allows users to explore data through various visualization techniques and filter options.",
+      tags: ["D3.js", "JavaScript", "HTML/CSS", "Data Visualization", "Interactive Design"],
       category: "web",
       github: "https://github.com/TimJuillet/Data_Visu_Rendu",
       features: [
-        "Multiple interactive chart types",
-        "Real-time data filtering",
+        "Multiple interactive chart types (bar, line, scatter, heatmap)",
+        "Real-time data filtering and updates",
         "Responsive design for all devices",
-        "Dynamic data updates"
+        "Dynamic data binding with D3.js",
+        "Custom tooltips and animations"
       ],
       date: "Jun 2024",
       color: "from-orange-500 to-red-500"
     },
     {
       id: 5,
-      title: "Olympic Games Management System",
-      description: "Comprehensive system for managing Olympic Games events, athletes, and results",
-      longDescription: "Implementation of complex database architecture with real-time updates. Full-stack application for managing all aspects of Olympic Games including events, athletes, schedules, and results.",
-      tags: ["Python", "MySQL", "Database", "Backend"],
+      title: "Olympic Games Semantic Database",
+      description: "Semantic web application for Olympic Games data using OWL ontologies and RDF",
+      longDescription: "Development of a comprehensive semantic database for Olympic Games using Web Ontology Language (OWL), RDF, and RDFS. Created a knowledge graph representing athletes, events, results, and historical data with SPARQL query capabilities. The system enables complex semantic queries and reasoning about Olympic data.",
+      tags: ["Python", "OWL", "RDF", "RDFS", "SPARQL", "Semantic Web", "Knowledge Graph"],
       category: "web",
       github: "https://github.com/TimJuillet/ProjetJO",
       features: [
-        "Complex database architecture",
-        "Real-time result updates",
-        "Athlete and event management",
-        "RESTful API design"
+        "OWL ontology design for Olympic domain",
+        "RDF triple store implementation",
+        "SPARQL endpoint for complex queries",
+        "Semantic reasoning capabilities",
+        "Historical Olympic data integration",
+        "Knowledge graph visualization"
       ],
       date: "Apr 2024",
       color: "from-indigo-500 to-purple-500"
@@ -94,15 +100,16 @@ const Projects = () => {
       id: 6,
       title: "AI Dinosaur Name Generator",
       description: "Personal project using AI to generate new dinosaur names",
-      longDescription: "Exploration of natural language processing and generative AI techniques to create unique dinosaur names. Built a system using Jupyter Notebook that learns from existing dinosaur naming patterns to generate scientifically plausible new dinosaur names.",
-      tags: ["Python", "Jupyter Notebook", "NLP", "AI", "Machine Learning"],
+      longDescription: "Exploration of natural language processing and generative AI techniques to create unique dinosaur names. Built a system using Jupyter Notebook that learns from existing dinosaur naming patterns to generate scientifically plausible new dinosaur names using character-level RNN and LSTM models.",
+      tags: ["Python", "Jupyter Notebook", "NLP", "LSTM", "RNN", "Deep Learning"],
       category: "ml",
       github: "https://github.com/TimJuillet/Dinosaures_generate",
       features: [
-        "AI model for name generation",
+        "Character-level RNN/LSTM for name generation",
         "Pattern learning from existing dinosaur names",
         "Scientific naming convention adherence",
-        "Interactive Jupyter Notebook interface"
+        "Interactive Jupyter Notebook interface",
+        "Model training visualization"
       ],
       date: "Dec 2023",
       color: "from-yellow-500 to-orange-500"
@@ -111,14 +118,16 @@ const Projects = () => {
       id: 7,
       title: "Polyquiz - Elderly-Friendly Quiz Platform",
       description: "User-centered quiz website designed specifically for elderly users",
-      longDescription: "Group school project on Github to create a quiz website for the elderly using a user-centered approach. Focused on accessibility and ease of use.",
-      tags: ["Angular", "Docker", "Playwright", "TypeScript"],
+      longDescription: "Group school project on Github to create a quiz website for the elderly using a user-centered approach. Focused on accessibility features, large UI elements, and cognitive load reduction. Implemented with Angular and tested extensively with elderly users.",
+      tags: ["Angular", "TypeScript", "Docker", "Playwright", "Accessibility", "UX"],
       category: "web",
       features: [
         "Elderly-friendly UI/UX design",
-        "Accessibility features",
+        "WCAG accessibility compliance",
         "Docker containerization",
-        "E2E testing with Playwright"
+        "E2E testing with Playwright",
+        "User testing with elderly participants",
+        "Cognitive load optimization"
       ],
       date: "Jun 2023",
       color: "from-pink-500 to-rose-500"
@@ -127,14 +136,16 @@ const Projects = () => {
       id: 8,
       title: "Takenoko Board Game",
       description: "Complex board game implementation with AI bots",
-      longDescription: "Group school project implementing the Takenoko board game with intelligent bots. Focus on clean architecture, continuous integration, and object-oriented design principles.",
-      tags: ["Java", "Maven", "GitHub Actions", "OOP"],
+      longDescription: "Group school project implementing the Takenoko board game with intelligent bots. Focus on clean architecture using GRASP and SOLID principles, continuous integration with GitHub Actions, and comprehensive testing. The AI bots use different strategies to compete effectively.",
+      tags: ["Java", "Maven", "GitHub Actions", "OOP", "AI", "Clean Architecture"],
       category: "web",
       features: [
-        "AI bot implementation",
+        "Multiple AI bot strategies",
         "Clean architecture (GRASP, SOLID)",
         "Continuous integration pipeline",
-        "Comprehensive testing with Mockito"
+        "Comprehensive testing with Mockito",
+        "Design patterns implementation",
+        "Performance optimization"
       ],
       date: "Mar 2023",
       color: "from-teal-500 to-green-500"
@@ -143,14 +154,16 @@ const Projects = () => {
       id: 9,
       title: "The March of the Ants",
       description: "Interactive web application simulating ant colony optimization algorithms",
-      longDescription: "Developed for Terra Numerica at Inria Sophia Antipolis. Interactive visualization of ant colony optimization algorithms for pathfinding with real-time simulation.",
-      tags: ["TypeScript", "HTML/CSS", "Algorithms", "Visualization"],
+      longDescription: "Developed for Terra Numerica at Inria Sophia Antipolis. Interactive visualization of ant colony optimization algorithms for pathfinding with real-time simulation. The application serves as an educational tool to understand swarm intelligence and optimization algorithms.",
+      tags: ["TypeScript", "HTML/CSS", "Algorithms", "Canvas", "Educational"],
       category: "web",
       features: [
         "Real-time algorithm visualization",
         "Interactive pathfinding simulation",
         "Educational tool for algorithm learning",
-        "Optimized performance for smooth animations"
+        "Optimized canvas rendering",
+        "Parameter tuning interface",
+        "Multiple algorithm variants"
       ],
       date: "2022",
       color: "from-amber-500 to-yellow-500"

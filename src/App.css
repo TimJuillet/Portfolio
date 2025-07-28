@@ -1,5 +1,93 @@
 /* App.css - Styles spécifiques à l'application */
 
+/* Responsive container widths for different screen sizes */
+/* Standard HD screens */
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 1400px;
+  }
+  
+  /* Slightly larger font for better readability */
+  html {
+    font-size: 17px;
+  }
+  
+  /* Adjust spacing for larger screens */
+  .py-20 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+  
+  .py-16 {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+}
+
+/* 2K screens (2560x1440) */
+@media (min-width: 2560px) {
+  .max-w-7xl {
+    max-width: 1600px;
+  }
+  
+  /* Larger text for 2K/4K screens */
+  html {
+    font-size: 18px;
+  }
+  
+  /* Increase hero section size */
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  
+  /* Larger headings */
+  .text-4xl {
+    font-size: 3rem;
+  }
+  
+  .text-5xl {
+    font-size: 3.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 4rem;
+  }
+  
+  /* Better spacing for project cards */
+  .gap-8 {
+    gap: 2.5rem;
+  }
+  
+  /* Larger project cards on 2K+ */
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* 4K screens (3840x2160) */
+@media (min-width: 3840px) {
+  .max-w-7xl {
+    max-width: 2000px;
+  }
+  
+  html {
+    font-size: 20px;
+  }
+  
+  /* Even larger headings for 4K */
+  .text-5xl {
+    font-size: 4rem;
+  }
+  
+  .text-6xl {
+    font-size: 5rem;
+  }
+}
+
 /* Animation personnalisées supplémentaires */
 @keyframes float-rotate {
   0%, 100% {
@@ -74,6 +162,16 @@ body {
 @supports (padding-bottom: env(safe-area-inset-bottom)) {
   body {
     padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Fix for dark mode grid on mobile */
+@media (max-width: 768px) {
+  .dark svg#grid-pattern,
+  .dark .grid-bg,
+  body.dark svg[aria-hidden="true"] {
+    display: none !important;
+    opacity: 0 !important;
   }
 }
 
